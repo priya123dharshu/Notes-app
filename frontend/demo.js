@@ -27,7 +27,7 @@ function getValue(){
     
     $.get("http://localhost:3000/notes",
         function(response){
-            console.log(response);
+            // console.log(response);
             response.forEach(a =>{
                 card.append(`<div class="maindiv">
                 <h3>Title :</h3> 
@@ -63,13 +63,12 @@ function addValue(event){
             url: `http://localhost:3000/notes/${editId}`,
             type: "PUT",
             data:({
-                title: title.val().trim(),
-                description: description.val().trim(),
+                title: $("#title").val().trim(),
+                description:$("#description").val().trim()
             })
             
         });
 
-       
     }
     else
     {
@@ -99,13 +98,18 @@ function editValue(id){
     addbtn()
     $(".save").text("Edit")
     $.get(`http://localhost:3000/notes/${id}`,function(response){
-        title.value =response.title,
-        description.value =response.description
+
+        // title.value() =response.title.val(),
+        // description.value() =response.description.val()
+
+        $("#title").val(response.title) ; 
+        $("#description").val(response.description);
+        console.log(response.title,response.description);
+        
+        
 
     });
-
-    console.log(editId,"okokk");
-
+    
 }
 
 
