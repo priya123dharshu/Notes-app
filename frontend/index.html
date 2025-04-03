@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+        <header><h1>Notes App</h1></header>
+
+    <button id="addbtn" onclick="addbtn()"><img src="add.png" alt=""></button>
+  
+    <div class="sub-container">
+        <div class="card">
+            
+        </div>
+    </div>
+    </div>
+    <div class="form-container">
+        <form id="noteForm">
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Enter note title" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" placeholder="Enter note description" required></textarea>
+
+            <button type="submit" class="save" onclick="addValue(event)">Save Note</button>
+            <button type="button" class="cancel-btn">Cancel</button>
+        </form>
+    </div>
+    
+    <script src="demo.js"></script>
+</body>
+
+</html>
